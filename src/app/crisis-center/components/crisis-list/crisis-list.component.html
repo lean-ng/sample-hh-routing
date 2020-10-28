@@ -1,5 +1,5 @@
 
 <nav>
-  <a routerLink="world" routerLinkActive="aktiv">World Wide</a>
+  <a routerLink="./world" routerLinkActive="aktiv">World Wide</a>
   <a *ngFor="let r of countries" [routerLink]="[r.slug, { date: 'today' }]" routerLinkActive="aktiv">{{ r.name }}</a>
 </nav>

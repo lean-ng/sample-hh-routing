@@ -10,6 +10,7 @@ const routes: Route[] = [
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'c', loadChildren: () => import('./crisis-center/crisis-center.module').then(m => m.CrisisCenterModule)},
   { path: '**', component: NotFoundComponent },
 ];
 
