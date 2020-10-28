@@ -1,9 +1,10 @@
 <h1><a routerLink="/">Angular Routing</a></h1>
+{{ authSvc.authenticated ? 'Eingeloggt' : 'Ausgeloggt' }}
 <nav>
   <a routerLink="/home" routerLinkActive="aktiv">Home</a>
   <a routerLink="/about" routerLinkActive="aktiv">About</a>
   <a routerLink="/rates" routerLinkActive="aktiv">Rates</a>
-  <a routerLink="/krisen" routerLinkActive="aktiv">Crisis</a>
+  <a *ngIf="authSvc.authenticated" routerLink="/krisen" routerLinkActive="aktiv">Crisis</a>
   <a routerLink="/feature" routerLinkActive="aktiv">Feature</a>
 </nav>
 <router-outlet></router-outlet>

@@ -8,13 +8,15 @@ import { NotFoundComponent } from './core/components/not-found/not-found.compone
 import { AppRoutingModule } from './app-routing.module';
 import { ExratesModule } from './exrates/exrates.module';
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
+import { LoginComponent } from './core/components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
