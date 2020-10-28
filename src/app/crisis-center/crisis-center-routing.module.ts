@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from '../core/auth/auth.guard';
 import { CrisisCenterComponent } from './components/crisis-center/crisis-center.component';
 import { CrisisDetailsComponent } from './components/crisis-details/crisis-details.component';
 import { CrisisHomeComponent } from './components/crisis-home/crisis-home.component';
