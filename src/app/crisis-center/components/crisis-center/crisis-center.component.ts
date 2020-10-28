@@ -10,6 +10,7 @@ export class CrisisCenterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('Init Center');
   }
 
 }
