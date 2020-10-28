@@ -1,0 +1,15 @@
+nav {
+
+  display: flex;
+
+  a {
+    display: block;
+    margin: 0 2rem;
+    color: black;
+    padding: 0.5rem 1rem;
+
+    &.aktiv {
+      background-color: #88f;
+    }
+  }
+}

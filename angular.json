@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sample-routing"
+    }
+  },
+  "defaultProject": "sample-routing",
+  "cli": {
+    "analytics": false
+  }
 }
