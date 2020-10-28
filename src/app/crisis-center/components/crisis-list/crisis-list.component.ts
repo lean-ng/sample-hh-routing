@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrisisListComponent implements OnInit {
 
+  countries: { slug: string, name: string }[] =
+    [
+      { slug: 'germany', name: 'Germany' },
+      { slug: 'france', name: 'France' },
+      { slug: 'usa', name: 'USA' },
+      { slug: 'china', name: 'China' },
+    ];
+
   constructor() { }
 
   ngOnInit(): void {

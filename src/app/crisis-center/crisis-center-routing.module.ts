@@ -6,7 +6,7 @@ import { CrisisHomeComponent } from './components/crisis-home/crisis-home.compon
 
 const routes: Routes = [
   {
-    path: 'crisis', component: CrisisCenterComponent,
+    path: 'krisen', component: CrisisCenterComponent,
     children: [
       { path: '', component: CrisisHomeComponent },
       { path: ':country', component: CrisisDetailsComponent }
