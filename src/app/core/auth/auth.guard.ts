@@ -23,6 +23,6 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    return this.authSvc.authenticated || this.router.createUrlTree(['/login', { path: segments }]);
   }
 }

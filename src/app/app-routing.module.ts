@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
+import { AuthGuard } from './core/auth/auth.guard';
 import { AboutComponent } from './core/components/about/about.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { LoginComponent } from './core/components/login/login.component';
@@ -10,7 +11,8 @@ const routes: Route[] = [
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'c', loadChildren: () => import('./crisis-center/crisis-center.module').then(m => m.CrisisCenterModule)},
+  { path: 'c', canLoad: [AuthGuard],
+    loadChildren: () => import('./crisis-center/crisis-center.module').then(m => m.CrisisCenterModule)},
   { path: '**', component: NotFoundComponent },
 ];
 
